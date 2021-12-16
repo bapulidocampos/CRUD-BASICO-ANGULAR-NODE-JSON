@@ -1,0 +1,42 @@
+
+<div class="container">
+    <p>MODIFICAR PRODUCTO</p>
+    <div class="row">
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Nombre de Equipo</label>
+                    <input [(ngModel)]="equipo.nombre" type="text" class="form-control"  name="nombre">
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">CATEGORIA</label>
+                    <input [(ngModel)]="equipo.categoria" type="text" class="form-control" name="categoria">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">SABOR</label>
+                    <input [(ngModel)]="equipo.sabor" type="text" class="form-control" name="sabor">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">PRECIO</label>
+                    <input [(ngModel)]="equipo.precio" type="number" class="form-control" name="precio">
+                </div>
+                
+                 <div class="mb-3">
+                    <label class="form-label">ESTADO</label>
+                    <input [(ngModel)]="equipo.estado" readonly type="text" class="form-control" name="estado">
+                </div>
+                
+               
+                
+                <button (click)="modificar()" class="btn btn-primary">Guardar</button>
+            </form>
+        </div>
+
+
+
+
+    </div>
+    
+</div>
+

@@ -1,0 +1,64 @@
+
+<div class="container">
+    <p>AGREGAR </p>
+    <div class="row">
+        <div class="col-sm-6">
+
+            <div class="alert alert-success" *ngIf="status =='success'">
+                Registro completado correctamente,<a [routerLink]="['/login']">identificate aqui
+                </a>
+            
+            </div>
+                
+            <div class="alert alert-danger" *ngIf="status =='error'">
+                El registro no ha podido completarse, verifique sus datos
+            
+            </div>
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Nombre*</label>
+                    <input #nombre="ngModel" [(ngModel)]="equipo.nombre" type="text" class="form-control" name="nombre" required>
+                    <span class=" alert" *ngIf="!nombre.valid && nombre.touched">
+                        El nombre es obligatorio!!
+                        </span>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Categoria*</label>
+                    <input #categoria="ngModel" [(ngModel)]="equipo.categoria" type="text" class="form-control" name="categoria" required>
+                    <span class=" alert" *ngIf="!categoria.valid && categoria.touched">
+                        La categoria es obligatoria!!
+                        </span>
+                </div>
+                 <div class="mb-3">
+                    <label class="form-label">Sabor*</label>
+                    <input #sabor="ngModel" [(ngModel)]="equipo.sabor" type="text" class="form-control" name="sabor" required>
+                    <span class=" alert" *ngIf="!sabor.valid && sabor.touched">
+                        El sabor es obligatorio!!
+                        </span>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Precio*</label>
+                    <input #precio="ngModel" [(ngModel)]="equipo.precio" type="text" class="form-control" name="precio" required>
+                    <span class=" alert" *ngIf="!precio.valid && precio.touched">
+                        El precio es obligatorio!!
+                        </span>
+                </div>
+                 <div class="mb-3">
+                    <label class="form-label">Estado</label>
+                    <input [(ngModel)]="equipo.estado" type="text" class="form-control" name="estado">
+                   
+                </div>
+                
+               
+                
+                <button (click)="agregar()" class="btn btn-primary">Agregar</button>
+            </form>
+        </div>
+
+
+
+    </div>
+    
+</div>
